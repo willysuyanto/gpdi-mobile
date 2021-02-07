@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GPdI Mobile</string>
+    <string name="menu">GPdI Mobile</string>
+    <string name="gpdi_mobile">Gereja Pantekosta di Indonesia</string>
+    <string name="title_activity_tema_seminggu">TemaSemingguActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="senin">Senin</string>
+    <string name="selasa">Selasa</string>
+    <string name="rabu">Rabu</string>
+    <string name="kamis">Kamis</string>
+    <string name="jumat">Jumat</string>
+    <string name="sabtu">Sabtu</string>
+    <string name="minggu">Minggu</string>
+
+
+</resources>
