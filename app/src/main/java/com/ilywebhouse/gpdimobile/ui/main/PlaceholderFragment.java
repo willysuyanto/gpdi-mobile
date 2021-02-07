@@ -1,6 +1,7 @@
 package com.ilywebhouse.gpdimobile.ui.main;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.ilywebhouse.gpdimobile.R;
 
 /**
@@ -21,9 +24,13 @@ public class PlaceholderFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PageViewModel pageViewModel;
+    public TextView textTema;
+    public TextView textAyat;
+    public String hariterpilih;
 
-    public static PlaceholderFragment newInstance(int index) {
+
+    public static PlaceholderFragment newInstance(int index, String hari) {
+        Log.d( "newInstance: ",hari.toLowerCase());
         PlaceholderFragment fragment = new PlaceholderFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);
@@ -34,12 +41,6 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
-        int index = 1;
-        if (getArguments() != null) {
-            index = getArguments().getInt(ARG_SECTION_NUMBER);
-        }
-        pageViewModel.setIndex(index);
     }
 
     @Override
@@ -47,13 +48,11 @@ public class PlaceholderFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_tema_seminggu, container, false);
-        final TextView textView = root.findViewById(R.id.section_label);
-        pageViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        textTema = root.findViewById(R.id.section_label_tema);
+        textAyat = root.findViewById(R.id.section_label_ayat);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        Bundle bundle = getArguments();
+        DatabaseReference refs = database.getReference("tema");
         return root;
     }
 }

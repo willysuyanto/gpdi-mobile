@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.OnTit
         menuItems.add(new MenuItem("Tema Mingguan","tema",R.drawable.img_tema));
         menuItems.add(new MenuItem("Jadwal Pelayanan","jadwal",R.drawable.img_jadwal));
         menuItems.add(new MenuItem("Profil Gereja","profil",R.drawable.img_profil));
-        menuItems.add(new MenuItem("Diakonia","diakonia",R.drawable.img_diakonia));
         menuItems.add(new MenuItem("DPdI News","news",R.drawable.img_news));
         menuItems.add(new MenuItem("Contact Us","contact",R.drawable.contact));
     }
@@ -52,10 +51,6 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.OnTit
                 break;
             case "profil":
                 intent = new Intent(this, ProfilGerejaActivity.class);
-                intent.putExtra("menu", menuItems.get(position).getMenuLabel());
-                break;
-            case "diakonia":
-                intent = new Intent(this, DiakoniaActivity.class);
                 intent.putExtra("menu", menuItems.get(position).getMenuLabel());
                 break;
             case "news":

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "382656061762",
+    "firebase_url": "https://gpdi-mobile-c6440-default-rtdb.firebaseio.com",
+    "project_id": "gpdi-mobile-c6440",
+    "storage_bucket": "gpdi-mobile-c6440.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382656061762:android:b5c7a82b030817bf2ce8db",
+        "android_client_info": {
+          "package_name": "com.ilywebhouse.gpdimobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382656061762-gtjjfe63tru6143ceuu0urolji4b2s0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDubQGzxXADbdMpgn717G_GBJ6IUmMbY_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382656061762-gtjjfe63tru6143ceuu0urolji4b2s0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

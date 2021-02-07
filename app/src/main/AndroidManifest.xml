@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GPDIMobile">
+        <activity android:name=".UbahTemaActivity"></activity>
         <activity
             android:name=".TemaSemingguActivity"
             android:label="@string/title_activity_tema_seminggu"
-            android:theme="@style/Theme.GPDIMobile.NoActionBar"></activity>
+            android:theme="@style/Theme.GPDIMobile.NoActionBar" />
         <activity android:name=".ContactActivity" />
         <activity android:name=".NewsActivity" />
         <activity android:name=".DiakoniaActivity" />

@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.ilywebhouse.gpdimobile.R;
 
 /**
@@ -27,9 +29,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        return PlaceholderFragment.newInstance(position+1,mContext.getResources().getString(TAB_TITLES[position] ));
     }
 
     @Nullable

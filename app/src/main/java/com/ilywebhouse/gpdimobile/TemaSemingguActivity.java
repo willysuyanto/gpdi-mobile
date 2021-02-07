@@ -1,5 +1,6 @@
 package com.ilywebhouse.gpdimobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.ilywebhouse.gpdimobile.ui.main.SectionsPagerAdapter;
 
 public class TemaSemingguActivity extends AppCompatActivity {
@@ -34,6 +37,20 @@ public class TemaSemingguActivity extends AppCompatActivity {
         String toolbarTitle = bundle.getString("menu");
         toolbar = findViewById(R.id.my_toolbar);
         toolbar.setTitle(toolbarTitle);
+        toolbar.inflateMenu(R.menu.toolbar_menu);
+        toolbar.setOnMenuItemClickListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.action_edit:
+                    Intent intent = new Intent(TemaSemingguActivity.this, UbahTemaActivity.class);
+                    startActivity(intent);
+                    return true;
+                case R.id.action_settings:
+                    //lakukan sesuatu saat opsi settin di tap
+                    return true;
+                default:
+                    return true;
+            }
+        });
         toolbar.setNavigationOnClickListener(v -> {
             finish();
         });
