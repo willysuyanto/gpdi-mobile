@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -55,6 +56,8 @@ public class JadwalPelayananActivity extends AppCompatActivity implements SubMen
 
     @Override
     public void OnTitleClick(int position) {
-        Toast.makeText(this,"Dalam Pengembangan", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(JadwalPelayananActivity.this, DetailPelayanan.class);
+        intent.putExtra("menu", subMenuItems.get(position).getTitle());
+        startActivity(intent);
     }
 }

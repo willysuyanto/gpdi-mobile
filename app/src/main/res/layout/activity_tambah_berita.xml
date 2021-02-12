@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UbahTemaActivity">
+
+    <include
+        layout="@layout/my_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:hint="Judul Berita"
+            android:inputType="textCapWords"
+            android:backgroundTint="@color/primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/et_berita"
+            android:hint="Konten Berita"
+            android:inputType="textMultiLine|textCapSentences"
+            android:lines="25"
+            android:minLines="15"
+            android:gravity="top|left"
+            android:maxLines="25"
+            android:scrollbars="vertical"
+            android:backgroundTint="@color/primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publish"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GPDIMobile">
-        <activity android:name=".UbahTemaActivity"></activity>
+        <activity android:name=".DetailPelayanan"></activity>
+        <activity android:name=".TambahBeritaActivity" />
+        <activity android:name=".UbahTemaActivity" />
         <activity
             android:name=".TemaSemingguActivity"
             android:label="@string/title_activity_tema_seminggu"

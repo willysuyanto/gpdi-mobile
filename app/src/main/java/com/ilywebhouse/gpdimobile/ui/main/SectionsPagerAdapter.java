@@ -1,6 +1,7 @@
 package com.ilywebhouse.gpdimobile.ui.main;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -29,8 +30,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        String hari = mContext.getResources().getString(TAB_TITLES[position]);
+        Log.d("getItem: ",hari+position);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        return PlaceholderFragment.newInstance(position+1,mContext.getResources().getString(TAB_TITLES[position] ));
+        return PlaceholderFragment.newInstance(position,hari);
     }
 
     @Nullable
@@ -41,7 +44,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
         return TAB_TITLES.length;
     }
 }
