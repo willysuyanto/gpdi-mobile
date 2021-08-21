@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GPDIMobile">
-        <activity android:name=".DetailPelayanan"></activity>
+        <activity
+            android:name=".AddPeserta"
+            android:exported="true" />
+        <activity
+            android:name=".KelolaJadwal"
+            android:exported="true" />
+        <activity android:name=".DetailPelayanan" />
         <activity android:name=".TambahBeritaActivity" />
         <activity android:name=".UbahTemaActivity" />
         <activity

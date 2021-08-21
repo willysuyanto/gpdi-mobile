@@ -48,14 +48,10 @@
                     android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_menu"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

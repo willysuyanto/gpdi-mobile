@@ -2,19 +2,19 @@ package com.ilywebhouse.gpdimobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+import android.util.Log;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class JadwalPelayananActivity extends AppCompatActivity implements SubMenuAdapter.OnTitleListener {
 
@@ -29,6 +29,8 @@ public class JadwalPelayananActivity extends AppCompatActivity implements SubMen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jadwal_pelayanan);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
         initMenu();
 
         recyclerView = findViewById(R.id.rv_submenu);
@@ -43,6 +45,25 @@ public class JadwalPelayananActivity extends AppCompatActivity implements SubMen
         toolbar.setNavigationOnClickListener(v -> {
             finish();
         });
+        if(currentUser==null){
+            Log.d( "onCreate: ","Belum Login");
+        }else{
+            Log.d( "onCreate: ",currentUser.getEmail());
+            toolbar.inflateMenu(R.menu.toolbar_menu_jadwal);
+            toolbar.setOnMenuItemClickListener(item -> {
+                switch (item.getItemId()) {
+                    case R.id.action_edit:
+                        Intent intent = new Intent(JadwalPelayananActivity.this, KelolaJadwal.class);
+                        intent.putExtra("menu", "Kelola Jadwal");
+                        startActivity(intent);
+                        return true;
+                    default:
+                        return true;
+                }
+            });
+        }
+
+
     }
 
     void initMenu(){

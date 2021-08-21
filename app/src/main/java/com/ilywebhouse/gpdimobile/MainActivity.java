@@ -44,12 +44,6 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.OnTit
 
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-
-    }
 
 
     void initMenu(boolean isLoggedIn){
@@ -73,32 +67,39 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.OnTit
             case "tema":
                 intent = new Intent(this, TemaSemingguActivity.class);
                 intent.putExtra("menu", menuItems.get(position).getMenuLabel());
+                startActivity(intent);
                 break;
             case "jadwal":
                 intent = new Intent(this, JadwalPelayananActivity.class);
                 intent.putExtra("menu", menuItems.get(position).getMenuLabel());
                 intent.putExtra("image", menuItems.get(position).getMenuIcon());
+                startActivity(intent);
                 break;
             case "profil":
                 intent = new Intent(this, ProfilGerejaActivity.class);
                 intent.putExtra("menu", menuItems.get(position).getMenuLabel());
+                startActivity(intent);
                 break;
             case "news":
                 intent = new Intent(this, NewsActivity.class);
                 intent.putExtra("menu", menuItems.get(position).getMenuLabel());
+                startActivity(intent);
                 break;
             case "contact":
                 intent = new Intent(this, ContactActivity.class);
                 intent.putExtra("menu", menuItems.get(position).getMenuLabel());
+                startActivity(intent);
                 break;
             case "login":
                 intent = new Intent(this, LoginScreen.class);
+                startActivity(intent);
                 break;
             case "logout":
                 mAuth.signOut();
+                initMenu(false);
+                mAdapter.notifyDataSetChanged();
                 break;
 
         }
-        startActivity(intent);
     }
 }
