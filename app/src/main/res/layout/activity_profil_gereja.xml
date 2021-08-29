@@ -15,7 +15,7 @@
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textAlignment="center"
-        android:text="Gereja Pantekosta di Indonesia"/>
+        android:text="GPdI EL- UZAY PLUIT"/>
 
     <ImageView
         android:id="@+id/iv_profil"
@@ -30,7 +30,7 @@
         android:padding="16dp"
         android:textSize="16sp"
         android:justificationMode="inter_word"
-        android:text="Jalan Danau Sunter Selatan, Blok E, No. 1, Rt. 001 , Rw. 01, Sunter Agung, Tanjung Priok, RT.1/RW.16, Sunter Agung, Jakarta Utara, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14350"/>
+        android:text="Pluit RT.6/RW.8, Penjaringan, RT.6/RW.8, Pluit, Jakarta Utara, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14450"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

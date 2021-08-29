@@ -140,7 +140,7 @@ public class Schedule {
 				} else {
 					consecAssignment++;
 				}
-				if (consecAssignment > 2) {
+				if (consecAssignment > 1) {
 					conflictCount++;
 					consecAssignment = 0;
 				}

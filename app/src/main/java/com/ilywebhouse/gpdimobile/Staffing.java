@@ -13,7 +13,7 @@ public class Staffing {
 	public Staffing(int demand) {
 		this.demand = demand;
 		this.supply = 0;
-	}
+	} 
 
 	public void add() {
 		this.supply++;
