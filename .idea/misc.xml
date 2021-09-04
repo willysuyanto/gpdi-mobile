@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/drawable-v24/news_bg.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_add_peserta.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_contact.xml" value="0.264" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_detail_pelayanan.xml" value="0.264" />
@@ -10,8 +11,11 @@
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_kelola_jadwal.xml" value="0.2" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_main.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_profil_gereja.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_tambah_berita.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/activity_tema_seminggu.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/item_news.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/menu_items.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/layout/news_dialog.xml" value="0.264" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/menu/toolbar_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/menu/toolbar_menu_jadwal.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/willy/AndroidStudioProjects/gpdi-mobile/app/src/main/res/menu/toolbar_menu_news.xml" value="0.13020833333333334" />

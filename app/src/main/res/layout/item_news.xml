@@ -5,13 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/itemNews"
-    android:padding="16dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="6dp"
-    android:layout_margin="16dp">
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    app:cardUseCompatPadding="true">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="8dp"
         android:orientation="vertical">
 
 
@@ -20,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Judul Berita"
-            android:textSize="20dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:paddingHorizontal="8dp"/>
@@ -29,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="tanggal"
-            android:textSize="18dp"
+            android:textSize="16sp"
             android:paddingHorizontal="8dp"
             android:layout_marginBottom="8dp"
             android:textColor="@color/black"

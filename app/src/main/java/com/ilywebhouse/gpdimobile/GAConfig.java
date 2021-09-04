@@ -7,7 +7,7 @@ package com.ilywebhouse.gpdimobile;
  * @version 1.0
  */
 public class GAConfig {
-	public static final int POPULATION_SIZE = 50;
+	public static final int POPULATION_SIZE = 100;
 	public static final double MUTATION_RATE = 0.3;
 	public static final double MUTATION_GENE_RATE = 0.6;
 	public static final double CROSSOVER_RATE = 0.9;
